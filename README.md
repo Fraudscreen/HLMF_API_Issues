@@ -71,7 +71,7 @@ Where the XML returned is of this format:
 Any resource marked with address details here does not need to be included if blank or it can be submitted empty. Valid user agents can be found [here](http://www.useragentstring.com/pages/useragentstring.php). I recommend using any common browser user agent. To use the API and get a valid non-error response, the username and client code must be correct. Translation is a field that is included for future use, and currently serves no purpose, however it is recorded.
 
 ##Web Client Form layout
-![APIScreenshot2](https://github.com/Fraudscreen/HLMF_API_Production/blob/master/images/APIScreenshot2.jpg)
+![APIScreenshot2](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot2.jpg)
 Username and client code will determine who is using the REST API. They also form a basic type of user authentication, as you are unable to return anything meaningful from the API without using a valid username and client code. Organisation Name is the name of any UK business who has their name listed in the Royal Mail PAF data. Address 1 is a combination of the Street Name (Thoroughfare name and descriptor in PAF) or it is a Building Name. Address 2 is either the Street Name of a building that has a name or is is a Dependent Street (Dependent Thoroughfare name and descriptor). If an Address 3 is present this will change the format of the other 2 fields as follows:
 * Building Name, Street, Dependent Street
 * Sub Building Name, Building Name, Street
@@ -152,31 +152,31 @@ Please note that the above does only shows the valid formats for postcodes, ther
 From this point onwards screeshots will be shown for the Web Client, but all responses will be the same for any other method of interaction.
 
 ## Normal Response
-![APIScreenshot1](https://github.com/Fraudscreen/HLMF_API_Production/blob/master/images/APIScreenshot1.jpg)
+![APIScreenshot1](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot1.jpg)
 Correct address details are entered and the API will respond with a Fraudscreen Household level code. This updates the Result text at the bottom of the screen and decodes the XML response from the REST API into the text displayed on the screen. 
 
 ## Error Responses
 
 ### 0 - An error has occurred
-![APIScreenshot8](https://github.com/Fraudscreen/HLMF_API_Production/blob/master/images/APIScreenshot8.jpg)
+![APIScreenshot8](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot8.jpg)
 Some sort of unexpected error has occurred when matching an address and a Fraudscreen Household level code cannot be returned. If a 0 occurs, this means there is a problem with the current build and this needs to be addressed, so this should be raised as an issue.
 
 ### -1 - Incorrect username
-![APIScreenshot3](https://github.com/Fraudscreen/HLMF_API_Production/blob/master/images/APIScreenshot3.jpg)
+![APIScreenshot3](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot3.jpg)
 The username that has been entered is incorrect or does not exist in the clients table of the machine. Currently the only valid username is FRD and anything else entered in this field will produce this error.
 
 ### -2 - Incorrect client code
-![APIScreenshot4](https://github.com/Fraudscreen/HLMF_API_Production/blob/master/images/APIScreenshot4.jpg)
+![APIScreenshot4](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot4.jpg)
 The client code that has been entered is incorrect or does not exist in the clients table of the machine. Currently the only valid client code is CAPC and anything else entered in this field will produce this error.
 
 ### -3 - Incorrect client code and username
-![APIScreenshot5](https://github.com/Fraudscreen/HLMF_API_Production/blob/master/images/APIScreenshot5.jpg)
+![APIScreenshot5](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot5.jpg)
 The client code and the username that were entered are both incorrect or do not exist in the clients table of the machine. Currently the only valid username is FRD and the only valid client code is CAPC; anything else entered in this field will produce this error.
 
 ### -4 - Entered fields are blank
-![APIScreenshot6](https://github.com/Fraudscreen/HLMF_API_Production/blob/master/images/APIScreenshot6.jpg)
+![APIScreenshot6](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot6.jpg)
 All fields entered into the API are blank, so no match is possible. This will be what you get if you try to visit the [REST URL](https://prod.project-thoth.co.uk:4433/cake/RestAPI/view.xml) directly in a browser.
 
 ### -5 - Incorrect postcode
-![APIScreenshot7](https://github.com/Fraudscreen/HLMF_API_Production/blob/master/images/APIScreenshot7.jpg)
+![APIScreenshot7](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot7.jpg)
 The postcode entered doe not follow the rules of a postcode or doesn't exist, so no code can be determined.
