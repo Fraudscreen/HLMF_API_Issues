@@ -1,4 +1,4 @@
-# HLMF API Issues
+# HLMF API
 How to use and public issue tracker for HLMF API
 
 ##How to use the API
