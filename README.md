@@ -1,9 +1,6 @@
 # HLMF_API_Issues
 Public issue tracker for HLMF API
 
-##Raise an Issue with the API
-[Raise an issue](https://github.com/Fraudscreen/HLMF_API_Issues/issues)
-
 ##How to use the API
 
 Production API Client Link:
@@ -180,3 +177,6 @@ All fields entered into the API are blank, so no match is possible. This will be
 ### -5 - Incorrect postcode
 ![APIScreenshot7](https://github.com/Fraudscreen/HLMF_API_Issues/blob/master/images/APIScreenshot7.jpg)
 The postcode entered doe not follow the rules of a postcode or doesn't exist, so no code can be determined.
+
+##Raise an issue with the API
+[Raise an issue](https://github.com/Fraudscreen/HLMF_API_Issues/issues)
